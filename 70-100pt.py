@@ -65,10 +65,12 @@ class myApp(object):
         if event.char == "w":
             if py1 <= 6:
 	           drawpad.move(player,0,0)
-	           drawpad.move(rocket1,0,0)
+	           if rocket1Fired == False:
+	               drawpad.move(rocket1,0,0)
 	    else:
                 drawpad.move(player,0,-4)
-                drawpad.move(rocket1,0,-4)
+                if rocket1Fired == False:
+                    drawpad.move(rocket1,0,-4)
         if event.char == "a":
             if px1 <= 4:
 	           drawpad.move(player,0,0)
@@ -90,6 +92,9 @@ class myApp(object):
 	    else:
                 drawpad.move(player,4,0)
                 drawpad.move(rocket1,4,0)
+        if event.char == " ":
+            rocket
+        return rocket1Fired
 
             
     
