@@ -63,7 +63,7 @@ class myApp(object):
         global rocket1Fired
         px1,py1,px2,py2 = drawpad.coords(player)
         if event.char == "w":
-            if py1 <= 4:
+            if py1 <= 6:
 	           drawpad.move(player,0,0)
 	           drawpad.move(rocket1,0,0)
 	    else:
@@ -77,14 +77,14 @@ class myApp(object):
                 drawpad.move(player,-4,0)
                 drawpad.move(rocket1,-4,0)
         if event.char == "s":
-            if py2 <= 4:
+            if py2 >= drawpad.winfo_height():
 	           drawpad.move(player,0,0)
 	           drawpad.move(rocket1,0,0)
 	    else:
                 drawpad.move(player,0,4)
                 drawpad.move(rocket1,0,4)
         if event.char == "d":
-            if px2 <= 4:
+            if px2 >= drawpad.winfo_width()-4:
 	           drawpad.move(player,0,0)
 	           drawpad.move(rocket1,0,0)
 	    else:
