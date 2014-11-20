@@ -15,6 +15,7 @@ enemy = drawpad.create_rectangle(50,50,100,60, fill="red")
 rocket1Fired = False
 
 direction = 5
+rocketDirection = -10
 
 
 class myApp(object):
